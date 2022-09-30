@@ -1,38 +1,426 @@
-.App {
-  text-align: center;
+/************ Custom Font ************/
+@font-face {
+	font-family: Centra;
+	src: url('./assets/font/CentraNo2-Bold.ttf');
+	font-weight: 700;
+}
+@font-face {
+	font-family: Centra;
+	src: url('./assets/font/CentraNo2-Medium.ttf');
+	font-weight: 500;
+}
+@font-face {
+	font-family: Centra;
+	src: url('./assets/font/CentraNo2-Book.ttf');
+	font-weight: 400;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 75px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+h1,
+h3,
+h4,
+p {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.landingPage{
+    height: 100vh;
+    background-image: url('../src/assets/img/banner-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/******** Navbar Css ********/ 
+.Header {
+  top: 0;
+  width: 90vw;
+  position: fixed;
+  transition: 0.3s;
+  padding-top: 20px;
+  z-index: 999999;
+  margin: 10px 20px 0 80px;
+}
+.logo {
+  width: 90px;
+  transition: 0.3s;
+  margin-left: 8%;
+  margin-top: -7px;
+  margin-bottom: 2px;
+}
+.NavBar {
+  float: right;
+  margin: 10px 100px 10px 0;
+}
+.NavBar > a {
+  margin-right: 30px;
+  letter-spacing: 25px;
+}
+.NavBar > a > button {
+  background-color: #121212;
+  border: solid 1px white;
+  color: #ffff;
+  padding: 10px 10px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition: 0.3s;
+}
+.NavBar > a > button:hover {
+  background-color: #ffff !important;
+  color: #121212 !important;
+}
+.NavBarMob {
+  float: right;
+  display: none;
+  padding: 14px 30px 0 0;
+}
+/*****Banner Css***/
+.WelcomeContent {
+  padding: 110px 0 0 13%;
+}
+.WelcomeContent > img {
+  float: right;
+  margin-right: 150px;
+  margin-top: 50px;
+  z-index: -1;
+}
+.SocialTop > div {
+  margin-top: 10vh;
+  margin-left: 0;
+}
+.WelcomeMsg {
+  margin-top: 25px;
+  margin-bottom: 20px;
+  font-size: 46px;
+  color: white;
+}
+.WelcomeMsg > h2 {
+  margin-bottom: -5px;
+  font-size: 40px;
+}
+.WelcomeMsg > h1 {
+  margin-bottom: -5px;
+  font-size: 48px;
+}
+.CvButton {
+  margin-top: 20px;
+  padding: 10px 25px;
+  border: 1px solid white;
+  color: #fff;
+  background: #121212;
+  position: relative;
+  z-index: 0;
+  border-radius: 8px;
+}
+.CvButton:hover {
+  background: #fff;
+  color: #121212;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/************ Project Css ************/
+.projectView {
+  margin-top: 160px ;
+  padding: 25px 40px 20px 40px;
+  background: #121212;
+}
+.projectView > h1 {
+  text-align: center;
+  font-size: 45px;
+  font-weight: 700;
+  margin: 70px 50px 0 0;
+}
+.ProjectCards {
+  display: flex;
+  margin-top: 4%;
+  flex-direction: flex;
+  justify-content: space-evenly;
+}
+.ProjectCards p{
+  color: #fff;
+}
+.Column {
+  width: 28%;
+}
+.Column > a {
+  text-decoration: none;
+}
+
+.Column > a > div {
+  overflow: hidden;
+  text-align: center;
+  margin-bottom: 30px;
+  transition: transform 0.2s;
+  background-color:#3b3e50;
+  padding: 14px 20px 20px 20px;
+  border-radius: 30px;
+}
+.Column > a > div:hover {
+  transform: scale(1.01);
+}
+.Column > a > div > p {
+  font-size: 1.5rem;
+}
+.Column > a > div > img {
+  width: 55%;
+}
+
+/********** Skill CSS*****/
+.skillView{
+margin-top:0;
+padding: 50px 15px;
+text-align: center;
+background-color: #121212;
+}
+.skillView>h2{
+  font-size: 45px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 50px;
+  text-align: center;
+}
+ul{
+  display: block !important;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 800px;
+}
+ li{
+  display: inline-block !important;
+  margin: 7px;
+  padding: 5px 10px;
+  color: #fff;
+  background:#3b3e50;
+  cursor: default;
+  font-size: 1.2em;
+}
+li:hover{
+  background: #ffff;
+  color:#000;
+}
+
+/**********Social icons********/
+.Social {
+  margin-right: 3rem;
+}
+.SocialBtn {
+  display: flex;
+  margin: 30px 0 0 0;
+}
+.SocialBtn > a {
+  margin-right: 20px;
+}
+.SocialBtn > a:hover {
+  margin-top: -3px;
+}
+.SocialBtn > a > div {
+  width: 25px;
+  height: 25px;
+  background-size: cover;
+}
+.github {
+  background-image: url(./assets/img/navIcon1.svg);
+}
+.linkedin {
+  background-image: url(./assets/img/navIcon2.png);
+}
+.instagram {
+  background-image: url(./assets/img/navIcon3.svg);
+}
+.twitter{
+  background-image: url(./assets/img/navIcon4.svg);
+}
+
+/************ Contact Css ************/
+.contact {
+  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  padding: 60px 0 200px 0;
+  height: 750px;
+}
+.contact img {
+  width: 92%;
+  height: auto;
+}
+.contact h2 {
+	font-size: 45px;
+	font-weight: 700;
+  margin-bottom: 30px;
+  color: #fff;
+}
+.contact form input, .contact form textarea {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  color: #fff;
+  margin: 0 0 8px 0;
+  padding: 18px 26px;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  transition: 0.3s ease-in-out;
+}
+.contact form input:focus, .contact form textarea:focus {
+  background: rgba(255, 255, 255, 1);
+  color: #121212;
+}
+.contact form input::placeholder, .contact form textarea::placeholder {
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+}
+.contact form input:focus::placeholder, .contact form textarea:focus::placeholder {
+  color: #121212;
+  opacity: 0.8;
+}
+.contact form button {
+  font-weight: 700;
+  color: #000;
+  background-color: #fff;
+  padding: 14px 48px;
+  font-size: 18px;
+  margin-top: 25px;
+  border-radius: 0;
+  position: relative;
+  transition: 0.3s ease-in-out;
+}
+.contact form button span {
+  z-index: 1;
+  position: relative;
+}
+.contact form button:hover {
+  color: #fff;
+}
+.contact form button::before {
+  content: "";
+  background: #121212;
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  transition: 0.3s ease-in-out;
+}
+.contact form button:hover::before {
+  width: 100%;
+}
+
+/************ Footer CSS ************/
+.footer {
+  padding: 20px 40px;
+  background-color: #1f2235;
+  display: block;
+}
+.flex {
+  display: flex!important;
+  justify-content: space-around;
+}
+.mail > h4 {
+  margin-bottom: 20px;
+}
+.footer> p {
+  text-align: center;
+  margin-bottom: 0;
+  font-size: medium;
+}
+.Social {
+  margin-right: 3rem;
+}
+.SocialBtn {
+  display: flex;
+  margin: 30px 0 0 0;
+}
+.SocialBtn > a {
+  margin-right: 20px;
+}
+.SocialBtn > a:hover {
+  margin-top: -3px;
+}
+.SocialBtn > a > div {
+  width: 25px;
+  height: 25px;
+  background-size: cover;
+}
+.github {
+  background-image: url(./assets/img/navIcon2.png);
+}
+.linkedin {
+  background-image: url(./assets/img/navIcon1.svg);
+}
+.instagram {
+  background-image: url(./assets/img/navIcon3.svg);
+}
+.twitter{
+  background-image: url(./assets/img/navIcon4.svg);
+}
+
+@media (max-width: 450px){
+  .Header {
+    margin-left: 20px;
   }
-  to {
-    transform: rotate(360deg);
+  /* Header */
+  .Dp {
+    width: 65px;
+  }
+  .Dropdown > a {
+    float: none;
+    display: block;
+    padding: 12px 16px;
+  }
+  .NavBar {
+    display: none;
+  }
+  .NavBarMob {
+    display: block;
+  }
+  .WelcomeContent > img {
+    display: none;
+  }
+  .WelcomeMsg {
+    font-size: 38px;
+  }
+  .WelcomeMsg > h1 {
+    font-size: 39px;
+  }
+  .contact img{
+    display: none;
+  }
+  .SocialBtn {
+    padding-left: 0;
+  }
+  .footer {
+    padding: 20px 20px 0 20px;
+  }
+  .flex {
+    flex-direction: column;
+  }
+  .Social > h4 {
+    display: none;
+  }
+  .SocialBtn {
+    margin: 10px 0 0 38%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  /* Project Section */
+  .ProjectView {
+    margin-top: 0px;
+  }
+  .ProjectCards {
+    flex-direction: column;
+    margin-top: 50px;
+  }
+  .Column {
+    width: 100%;
   }
 }
