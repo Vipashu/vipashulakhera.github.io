@@ -25,7 +25,7 @@ export default function Navbar() {
 
   return (
     <div className='Header' id="header">
-      <a href="www.vipashulakhera.vercel.app">
+      <a href="https://vipashulakhera.vercel.app">
         <img src={logo} alt={"logo"} className="logo" id="logo" />
       </a>
       {/* Nav Bar */}
