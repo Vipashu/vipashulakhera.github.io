@@ -4,7 +4,7 @@ import blogimage from'../assets/img/header-img.svg';
 
 export default function Banner() {
   const CvLink =
-    'https://docs.google.com/document/d/16bWcURSUWuMtqXiYIDvy7rFo6qWmFenYEbAPhVUNRGE/edit?usp=sharing'
+    'https://drive.google.com/file/d/1I0N8cZbIHZxRdAUjIfx8qaouyQ88oEBO/view?usp=drivesdk'
   return (
     <div className='WelcomeView' id="WelcomeView">
       <div className='WelcomeContent'>
