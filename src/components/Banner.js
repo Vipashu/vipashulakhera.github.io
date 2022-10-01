@@ -4,7 +4,7 @@ import blogimage from'../assets/img/header-img.svg';
 
 export default function Banner() {
   const CvLink =
-    'https://www.google.com'
+    'https://docs.google.com/document/d/16bWcURSUWuMtqXiYIDvy7rFo6qWmFenYEbAPhVUNRGE/edit?usp=sharing'
   return (
     <div className='WelcomeView' id="WelcomeView">
       <div className='WelcomeContent'>
